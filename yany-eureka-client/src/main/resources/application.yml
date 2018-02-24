@@ -1,0 +1,28 @@
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1081/eureka/
+  instance:
+    appname: eureka.client.01
+spring:
+  application:
+    name: eureka-client
+
+---
+spring:
+  profiles: client.01
+server:
+  port: 8090
+
+---
+spring:
+  profiles: client.02
+server:
+  port: 8091
+
+---
+spring:
+  profiles: client.03
+server:
+  port: 8092
+
