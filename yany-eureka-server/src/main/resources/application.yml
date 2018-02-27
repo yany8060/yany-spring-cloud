@@ -2,10 +2,50 @@ eureka:
   client:
     register-with-eureka: false
     fetch-registry: false
-    service-url:
-      defaultZone: http://localhost:1081/eureka/
 spring:
   application:
     name: eureka-server
+
+#security:
+#  user:
+#    name: yany8060
+#    password: 123456
+
+# http://yany8060:123456@admtest:1082/eureka/
+
+
+
+---
+spring:
+  profiles: eureka.server.01
 server:
   port: 1081
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://admtest:1082/eureka/,http://yanytest:1083/eureka/
+---
+spring:
+  profiles: eureka.server.02
+server:
+  port: 1082
+eureka:
+  instance:
+    hostname: admtest
+  client:
+    service-url:
+      defaultZone: http://localhost:1081/eureka/
+
+---
+spring:
+  profiles: eureka.server.03
+server:
+  port: 1083
+eureka:
+  instance:
+    hostname: yanytest
+  client:
+    service-url:
+      defaultZone: http://yanytest:1083/eureka/
