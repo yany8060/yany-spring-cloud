@@ -12,9 +12,6 @@
     <groupId>com.yany</groupId>
     <artifactId>yany-eureka-consumer</artifactId>
     <packaging>pom</packaging>
-    <modules>
-        <module>../yany-config-server</module>
-    </modules>
 
 
     <dependencies>

@@ -12,6 +12,7 @@
         <module>yany-eureka-server</module>
         <module>yany-eureka-client</module>
         <module>yany-eureka-consumer</module>
+        <module>yany-config-server</module>
     </modules>
 
 
