@@ -1,10 +1,20 @@
 server:
   port: 7010
+
+
 spring:
+  application:
+    name: config-server
   cloud:
     config:
       server:
         git:
-          uri:
+          uri: https://github.com/yany8060/yany-spring-cloud.git  # 配置git仓库的地址
+          username: xxxxxx                                        # git仓库的账号
+          password: xxxxxx                                        # git仓库的密码
+          search-paths: config-center                             # git仓库地址下的相对地址，可以配置多个，用,分割。
 
 
+
+# http://localhost:7010/yany-test.yml
+# http://localhost:7010/yany-test.json
