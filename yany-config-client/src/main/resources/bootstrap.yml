@@ -4,4 +4,14 @@ spring:
       name: yany
       profile: default
       label: master
-      uri: http://localhost:7010/
+#      uri: http://localhost:7010/  # 使用eureka集群 则不需要指明
+      fail-fast: true
+      discovery:
+        enabled: true
+        service-id: config-server
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1081/eureka/
