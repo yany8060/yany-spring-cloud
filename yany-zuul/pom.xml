@@ -10,15 +10,12 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.yany</groupId>
-    <artifactId>yany-eureka-consumer</artifactId>
-    <packaging>pom</packaging>
-
+    <artifactId>yany-zuul</artifactId>
 
     <dependencies>
-        <!-- feign 里面已经包含了 spring-cloud-starter-ribbon -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-feign</artifactId>
+            <artifactId>spring-cloud-starter-zuul</artifactId>
         </dependency>
 
         <dependency>
@@ -27,22 +24,12 @@
         </dependency>
 
         <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-actuator</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.cloud</groupId>
-            <artifactId>spring-cloud-starter-hystrix-dashboard</artifactId>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.40</version>
         </dependency>
 
     </dependencies>
-
-
 
     <build>
         <plugins>
@@ -52,4 +39,5 @@
             </plugin>
         </plugins>
     </build>
+
 </project>

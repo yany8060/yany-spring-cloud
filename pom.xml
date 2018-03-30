@@ -14,6 +14,7 @@
         <module>yany-eureka-consumer</module>
         <module>yany-config-server</module>
         <module>yany-config-client</module>
+        <module>yany-hystrix-dashboard-turbine</module>
     </modules>
 
 

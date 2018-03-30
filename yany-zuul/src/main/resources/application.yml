@@ -1,0 +1,19 @@
+server:
+  port: 8050
+spring:
+  application:
+    name: yany-zuul
+zuul:
+  routes:
+    api-test:
+      path: /yany/**
+      url: http://yany8060.xyz/
+    api-1:
+      path: /hi/**
+      url: http://localhost:8090/
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:1081/eureka/
+

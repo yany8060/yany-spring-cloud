@@ -2,8 +2,10 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:1081/eureka/
-  instance:
-    appname: eureka.consumer
+#  instance:
+#    appname: eureka.consumer
+
+
 spring:
   application:
     name: eureka-consumer
